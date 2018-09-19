@@ -10,8 +10,28 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall_back</artifactId>
+    <artifactId>mall_protal</artifactId>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>mall_protal_dao</module>
+        <module>mall_protal_service</module>
+        <module>mall_protal_web</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <port>8888</port>
+                    <path>/mall</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
